@@ -27,7 +27,7 @@ new Vue({
             };
             this.turns.unshift({
                 isPlayer: true,
-                text: 'Player heals for 10'
+                text: 'Player heals for 10 🏥'
             });
             this.monsterAttacks();
         },
@@ -39,7 +39,7 @@ new Vue({
             this.monsterHealth -= damage;
             this.turns.unshift({
                 isPlayer: true,
-                text: 'Player hits monster for ' + damage
+                text: '🤴 Player hits monster for ' + damage + ' 🗡️'
             });
             if(this.checkWin()) {
                 return;
@@ -51,7 +51,7 @@ new Vue({
             this.playerHealth -= damage;
             this.turns.unshift({
                 isPlayer: false,
-                text: 'Monster hits monster for ' + damage
+                text: '👾 Monster hits monster for ' + damage + ' 🗡️'
             });
             this.checkWin();
         },
